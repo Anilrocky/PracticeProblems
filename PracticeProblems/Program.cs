@@ -9,7 +9,7 @@ namespace PracticeProblems
             bool flag = true;
             while (flag)
             {
-                Console.WriteLine("Choose an option to perform \n1.Line Comparison \n2.Check Prime Number \n3.Prime Range \n4.Exit");
+                Console.WriteLine("Choose an option to perform \n1.Line Comparison \n2.Check Prime Number \n3.Prime Range \n4.Factorial of a number \n5.Exit");
                 int option = Convert.ToInt32(Console.ReadLine());
                 switch (option)
                 {
@@ -36,6 +36,12 @@ namespace PracticeProblems
                         primeRange.Range(start, end);
                         break;
                     case 4:
+                        Console.WriteLine("Enter any number");
+                        int n = Convert.ToInt32(Console.ReadLine());
+                        Factorial factorial = new Factorial();
+                        factorial.FactorialOfNum(n);
+                        break;
+                    case 5:
                         flag = false;
                         break;
                 }
