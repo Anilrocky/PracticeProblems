@@ -9,7 +9,7 @@ namespace PracticeProblems
             bool flag = true;
             while (flag)
             {
-                Console.WriteLine("Choose an option to perform \n1.Line Comparison \n2.Exit");
+                Console.WriteLine("Choose an option to perform \n1.Line Comparison \n2.Check Prime Number \n3.Exit");
                 int option = Convert.ToInt32(Console.ReadLine());
                 switch (option)
                 {
@@ -22,6 +22,12 @@ namespace PracticeProblems
                         lineComparison2.Compare(line1, line2);
                         break;
                     case 2:
+                        CheckPrime checkPrime = new CheckPrime();
+                        Console.WriteLine("Enter number");
+                        int num = Convert.ToInt32(Console.ReadLine());
+                        checkPrime.PrimeOrNot(num);
+                        break;                      
+                    case 3:
                         flag = false;
                         break;
                 }
