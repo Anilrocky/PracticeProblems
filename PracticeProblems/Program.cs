@@ -9,7 +9,8 @@ namespace PracticeProblems
             bool flag = true;
             while (flag)
             {
-                Console.WriteLine("Choose an option to perform \n1.Line Comparison \n2.Check Prime Number \n3.Prime Range \n4.Factorial of a number \n5.Arithmetic Operations \n6.Exit");
+                Console.WriteLine("Choose an option to perform \n1.Line Comparison \n2.Check Prime Number \n3.Prime Range \n4.Factorial of a number \n5.Arithmetic Operations" +
+                    "\n6.Prime Factors \n7.Exit");
                 int option = Convert.ToInt32(Console.ReadLine());
                 switch (option)
                 {
@@ -50,6 +51,12 @@ namespace PracticeProblems
                         arithmetic.PerformOperations(a, b);
                         break;
                     case 6:
+                        Console.WriteLine("Enter number");
+                        int c = Convert.ToInt32(Console.ReadLine());
+                        PrimeFactors factors = new PrimeFactors();
+                        factors.FactorsOfNum(c);
+                        break;
+                    case 7:
                         flag = false;
                         break;
                 }
