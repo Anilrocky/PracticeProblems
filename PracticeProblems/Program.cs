@@ -10,7 +10,7 @@ namespace PracticeProblems
             while (flag)
             {
                 Console.WriteLine("Choose an option to perform \n1.Line Comparison \n2.Check Prime Number \n3.Prime Range \n4.Factorial of a number \n5.Arithmetic Operations" +
-                    "\n6.Prime Factors \n7.Exit");
+                    "\n6.Prime Factors \n7.Swap two numbers \n8.Exit");
                 int option = Convert.ToInt32(Console.ReadLine());
                 switch (option)
                 {
@@ -57,6 +57,10 @@ namespace PracticeProblems
                         factors.FactorsOfNum(c);
                         break;
                     case 7:
+                        Swap2Numbers swap2Numbers = new Swap2Numbers();
+                        swap2Numbers.SwapNum();
+                        break;
+                    case 8:
                         flag = false;
                         break;
                 }
